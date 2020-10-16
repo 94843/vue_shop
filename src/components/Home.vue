@@ -73,7 +73,7 @@ export default {
   .el-header {
       background-image: linear-gradient(#000, #fff);
       color: #fff;
-      border-bottom: 1px solid red;
+      border-bottom: 2px solid red;
       display: flex;
       line-height: 60px;
       justify-content: space-between;
@@ -101,7 +101,7 @@ export default {
     height: 100%;
   }
   .toggle-button{
-    background-color: red;
+    background-image: linear-gradient(red, #fff);
     color: black;
     text-align: center;
     font-size: 10px;

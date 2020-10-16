@@ -1,7 +1,7 @@
 html,
 body,
 #app {
-  background-color: black;
+  background-image: url(./bgc.jpg);
   margin: 0;
   padding: 0;
 }

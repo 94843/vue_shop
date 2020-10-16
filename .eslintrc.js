@@ -14,6 +14,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/valid-v-for':0,
-    'vue/no-unused-vars':0
+    'vue/no-unused-vars':0,
+    'vue/no-dupe-keys':0
   }
 }

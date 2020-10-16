@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import ElementUI from "element-ui"
+import ElementUI, { MessageBox } from "element-ui"
 import 'element-ui/lib/theme-chalk/index.css'
 import "./assets/login_con.css"
 import axios from 'axios'
@@ -17,6 +17,7 @@ axios.interceptors.request.use(config=>{
   return config
 })
 Vue.prototype.$http = axios
+Vue.prototype.$confirm = MessageBox
 
 Vue.use(ElementUI)
 
