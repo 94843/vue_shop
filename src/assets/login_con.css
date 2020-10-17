@@ -4,4 +4,5 @@ body,
   background-image: url(./bgc.jpg);
   margin: 0;
   padding: 0;
+  min-width: 1200px;
 }

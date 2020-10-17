@@ -20,7 +20,6 @@
           </el-col>         
       </el-row>
       <!-- 详细信息区域 -->
-
       <el-table :data="userData" stripe border style="width: 100%">
         <el-table-column prop="username" label="姓名"></el-table-column>
         <el-table-column prop="mobile" label="电话"></el-table-column>
@@ -46,6 +45,7 @@
         </el-table-column>
       </el-table>
     </el-card>
+    <!-- 分页 -->
     <div class="block">
       <el-pagination
         @size-change="handleSizeChange"
@@ -136,10 +136,10 @@ export default {
       editForm:{},
       //添加用户的各项参数
       adduser:{
-        username:'sdfg',
-        password:'1231231',
-        email:'123123s@qq.com',
-        mobile:'13223232323'
+        username:'',
+        password:'',
+        email:'',
+        mobile:''
       },
       //添加表单的验证规则
        addrules: {
