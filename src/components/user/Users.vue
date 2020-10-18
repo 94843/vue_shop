@@ -36,7 +36,7 @@
               <el-button type="primary" size="mini" icon="el-icon-edit" @click="editUserGo(scope.row.id)"></el-button>          
             </el-tooltip>
             <el-tooltip content="分配角色" placement="top">
-              <el-button type="warning" size="mini" icon="el-icon-bangzhu"></el-button>
+              <el-button type="warning" size="mini" icon="el-icon-bangzhu" @click="assigningRoles"></el-button>
             </el-tooltip>
             <el-tooltip content="删除" placement="top">
               <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeUserId(scope.row.id)"></el-button>
@@ -96,10 +96,15 @@
         <el-button type="primary" @click="edity(editForm.id)">确 定</el-button>
       </div>
     </el-dialog>
+    <!-- 分配角色对话框 -->
+    <el-dialog title="分配角色" :visible.sync="assigningRolesDialog">
+     分配角色
+    </el-dialog>
   </div>
 </template>
 <script>
 export default {
+  //数据
    data(){
      //验证邮箱的规则
     var checkEmail = (rule, value, cb) => {
@@ -132,6 +137,7 @@ export default {
       //是否显示对话框
       addUserInfo:false,
       editUser:false,
+      assigningRolesDialog:false,
       //查询到的用户信息
       editForm:{},
       //添加用户的各项参数
@@ -162,9 +168,11 @@ export default {
         }
     }
   },
+    //入口函数
     created(){
       this.getInfoData()
     },
+    //方法
     methods:{
       //发送请求获取数据渲染页面
         async getInfoData(){
@@ -279,6 +287,10 @@ export default {
         }
         this.$message.success('删除成功')
         this.getInfoData()
+      },
+      //分配角色点击事件
+      assigningRoles(){
+        this.assigningRolesDialog=true
       }
     },
 }

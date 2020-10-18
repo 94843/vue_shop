@@ -1,7 +1,8 @@
 html,
 body,
 #app {
-  background-image: url(./bgc.jpg);
+  background: url(./bg.gif) repeat;
+
   margin: 0;
   padding: 0;
   min-width: 1200px;

@@ -1,7 +1,17 @@
 <template>
-    <div>
-        分类参数组件
-    </div>
+  <div>
+
+    <!-- 面包屑导航 -->
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
+      <el-breadcrumb-item>分类参数</el-breadcrumb-item>
+    </el-breadcrumb>
+    <!-- 卡片 -->
+    <el-card>
+      分类参数组件
+    </el-card>
+  </div>
 </template>
 <script>
 export default {
@@ -9,5 +19,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    
+    .el-card{
+      margin-top: 15px;
+    }
 </style>
